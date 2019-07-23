@@ -2,11 +2,36 @@
   "name": "react-navigation-customizable",
   "version": "1.0.2",
   "description": "A simple navigation library for react versions above 16.8",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "repository": "git@github.com:shyam1992/react-navigation-customizable.git",
   "author": "Shyam Kumar",
   "license": "MIT",
-  "dependencies": {
-    "react": "^16.8.6"
+  "scripts": {
+    "build": "webpack",
+    "prepublish": "rm -rf ./dist && npm run build"
+  },
+  "keywords": [
+    "react",
+    "navigation",
+    "navigator",
+    "router"
+  ],
+  "homepage": "https://github.com/shyam1992/react-navigation-customizable",
+  "peerDependencies": {
+    "react": ">=16.8.6"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.8.6",
+    "react-scripts": "^3.0.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.6"
   }
 }

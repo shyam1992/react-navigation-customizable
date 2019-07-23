@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 
-export const WizardParent = (props) => {
+const WizardParent = (props) => {
   const [steps, updateSteps] = useState([])
   const [currentstep, setStep] = useState(props.currentstep || 0) 
   let { next, back, showBackButton } = Navigator({
@@ -87,4 +87,6 @@ function Navigator({stepsCount, currentstep, setStep, onBeforeNext, onBeforeBack
   }
 
 }
+
+module.exports.WizardParent = WizardParent;
 
